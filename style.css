@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --cyan: #00FFF8;
+    --softblue: #8BACD9;
+    --black: #000000;
+    --verydarkblueCard: #15263F;
+    --verydarkblueLine: #2E405A;
+    --verydarkblueMain:  #0D192C;
+    --white: #FFFFFF;
+    --cyan-rgb: 0, 255, 248;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--verydarkblueMain);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-container {
+    width: 350px;
+    height: 596px;
+    border-radius: 15px;
+    background-color: var(--verydarkblueCard);
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-card {
+    width: 302px;
+    height: 302px;
+    border-radius: 8px;
+}
+
+.card-img {
+    width: 302px;
+    height: 302px;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+.mask-cyan {
+    width: 302px;
+    height: 302px;
+    background-color: rgba(var(--cyan-rgb), 0);
+    border-radius: 8px;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye-ico {
+    width: 48px;
+    height: 48px;
+    opacity: 0;
+}
+
+.mask-cyan:active {
+    background-color: rgba(var(--cyan-rgb), 0.503);
+}
+
+.mask-cyan:active .eye-ico {
+    opacity: 1;
+}
+
+
+.s1 {
+    margin-top: 24px;
+    width: 302px;
+    color: var(--white, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* Heading */
+    font-family: Outfit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+.s1:active {
+    color: var(--Cyan, #00FFF8);
+}
+
+.s2 {
+    margin-top: 16px;
+    width: 302px;
+    color: var(--Soft-Blue, #8BACD9);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Body */
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; /* 144.444% */
+}
+
+.s3 {
+    margin-top: 24px;
+    width: 302px;
+    display: flex;
+    justify-content: space-between;
+}
+.s3-etherium {
+    display: inline-flex;
+    align-items: center;
+    gap: 6.485px;
+}
+.s3-clock {
+    display: inline-flex;
+    align-items: center;
+    gap: 7.7px;
+}
+
+.s1-s3 {
+    color: var(--Cyan, #00FFF8);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Caption (Bold) */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.s2-s3 {
+    color: var(--Soft-Blue, #8BACD9);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Caption */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.img1-s3 {
+    width: 11px;
+    height: 18px;
+}
+.img2-s3 {
+    width: 16px;
+    height: 16px;
+}
+
+.s4 {
+    margin-top: 24px;
+    width: 302px;
+    height: 1px;
+    background: var(--verydarkblueLine);
+}
+
+.s5{
+    margin-top: 16px;
+    width: 302px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.img1-s5 {
+    width: 33px;
+    height: 33px;
+    border-radius: 33px;
+    border: 1px solid var(--White, #FFF);
+}
+
+.s1-s5 {
+    color: var(--Soft-Blue, #8BACD9);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Caption */
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.s2-s5 {
+    color: var(--white, #FFF);
+    cursor: pointer;
+    user-select: none;
+}
+
+.s2-s5:active {
+    color: var(--Cyan, #00FFF8);
+}
+
+@media (max-width: 481px) {
+    .card-container {
+        width: 327px;
+        height: 543px;
+    }
+
+    .card-img, .img-card, .mask-cyan {
+        width: 278px;
+        height: 278px;
+    }
+
+    .s1 {
+        width: 278px;
+    }
+
+    .s2 {
+        margin-top: 12px;
+        width: 278px;
+    }
+
+    .s3 {
+        margin-top: 17px;
+        width: 278px;
+    }
+    
+    .s1-s3, .s2-s3 {
+        font-size: 15px;
+    } 
+    
+    .img1-s3 {
+        width: 11px;
+        height: 18px;
+    }
+    .img2-s3 {
+        width: 16px;
+        height: 16px;
+    }
+
+    .s4 {
+        margin-top: 16px;
+        width: 278px;
+    }
+
+    .s5{
+        width: 278px;
+    }
+    
+    .s1-s5 {
+        font-size: 15px;
+    }
+}
